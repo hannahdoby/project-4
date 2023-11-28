@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Rating Predictor</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <div class="container-fluid theater-bg">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 p-5">
+        <h1 class="text-center mb-4">Rate Movie Genres</h1>
+        <form id="movieRatingForm">
+          <!-- Radio buttons for movie genres -->
+          <!-- You can use a loop in your actual implementation to generate these dynamically -->
+          <div class="form-group">
+            <div class="rating-inputs">
+              <!-- Radio buttons for ratings -->
+                <!-- Replace 'name' attribute value with unique identifiers for Flask processing -->
+                <!-- Action Rating -->
+                <label for="action">Action:&nbsp</label>
+                <label>
+                    <input type="radio" name="actionRating" value="0.5"> 0.5
+                </label>
+                <label>
+                    <input type="radio" name="actionRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="actionRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="actionRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="actionRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="actionRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="actionRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="actionRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="actionRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="actionRating" value="5"> 5
+                </label><br>
+
+                <!-- Adventure Rating -->
+                <label for="adventure">Adventure&nbsp</label>
+                <label>
+                    <input type="radio" name="adventureRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="adventureRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="adventureRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="adventureRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="adventureRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="adventureRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="adventureRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="adventureRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="adventureRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="adventureRating" value="5"> 5
+                </label><br>
+
+                <!-- Animation Rating -->
+                <label for="animation">Animation:&nbsp</label>
+                <label>
+                    <input type="radio" name="animationRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="animationRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="animationRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="animationRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="animationRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="animationRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="animationRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="animationRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="animationRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="animationRating" value="5"> 5
+                </label><br>
+
+                <!-- Comedy Rating -->
+                <label for="comedy">Comedy:&nbsp</label>
+                <label>
+                    <input type="radio" name="comedyRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="comedyRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="comedyRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="comedyRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="comedyRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="comedyRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="comedyRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="comedyRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="comedyRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="comedyRating" value="5"> 5
+                </label><br>
+
+                <!-- Crime Rating -->
+                <label for="crime">Crime:&nbsp</label>
+                <label>
+                    <input type="radio" name="crimeRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="crimeRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="crimeRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="crimeRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="crimeRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="crimeRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="crimeRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="crimeRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="crimeRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="crimeRating" value="5"> 5
+                </label><br>                
+
+                <!-- Documentary Rating -->
+                <label for="documentary">Documentary:&nbsp</label>
+                <label>
+                    <input type="radio" name="documentaryRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="documentaryRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="documentaryRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="documentaryRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="documentaryRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="documentaryRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="documentaryRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="documentaryRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="documentaryRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="documentaryRating" value="5"> 5
+                </label><br>
+
+                <!-- Drama Rating -->
+                <label for="drama">Drama:&nbsp</label>
+                <label>
+                    <input type="radio" name="dramaRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="dramaRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="dramaRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="dramaRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="dramaRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="dramaRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="dramaRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="dramaRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="dramaRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="dramaRating" value="5"> 5
+                </label><br>
+
+                <!-- Fantasy Rating -->
+                <label for="fantasy">Fantasy:&nbsp</label>
+                <label>
+                    <input type="radio" name="fantasyRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="fantasyRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="fantasyRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="fantasyRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="fantasyRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="fantasyRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="fantasyRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="fantasyRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="fantasyRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="fantasyRating" value="5"> 5
+                </label><br>
+
+                <!-- Film-Noir Rating -->
+                <label for="film-noir">Film-Noir:&nbsp</label>
+                <label>
+                    <input type="radio" name="filmnoirRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="filmnoirRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="filmnoirRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="filmnoirRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="filmnoirRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="filmnoirRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="filmnoirRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="filmnoirRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="filmnoirRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="filmnoirRating" value="5"> 5
+                </label><br>
+
+                <!-- Horror Rating -->
+                <label for="horror">Horror:&nbsp</label>
+                <label>
+                    <input type="radio" name="horrorRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="horrorRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="horrorRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="horrorRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="horrorRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="horrorRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="horrorRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="horrorRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="horrorRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="horrorRating" value="5"> 5
+                </label><br>
+
+                <!-- Musical Rating -->
+                <label for="musical">Musical:&nbsp</label>
+                <label>
+                    <input type="radio" name="musicalRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="musicalRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="musicalRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="musicalRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="musicalRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="musicalRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="musicalRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="Rating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="musicalRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="musicalRating" value="5"> 5
+                </label><br>
+
+                <!-- Mystery Rating -->
+                <label for="mystery">Mystery:&nbsp</label>
+                <label>
+                    <input type="radio" name="mysteryRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="mysteryRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="mysteryRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="mysteryRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="mysteryRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="mysteryRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="mysteryRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="mysteryRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="mysteryRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="mysteryRating" value="5"> 5
+                </label><br>
+
+                <!-- Romance Rating -->
+                <label for="romance">Romance:&nbsp</label>
+                <label>
+                    <input type="radio" name="romanceRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="romanceRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="romanceRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="romanceRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="romanceRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="romanceRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="romanceRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="romanceRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="romanceRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="romanceRating" value="5"> 5
+                </label><br>
+
+                <!-- Sci-Fi Rating -->
+                <label for="sci-fi">Sci-Fi:&nbsp</label>
+                <label>
+                    <input type="radio" name="scifiRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="scifiRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="scifiRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="scifiRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="scifiRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="scifiRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="scifiRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="scifiRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="scifiRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="scifiRating" value="5"> 5
+                </label><br>
+
+                <!-- Thriller Rating -->
+                <label for="thriller">Thriller:&nbsp</label>
+                <label>
+                    <input type="radio" name="thrillerRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="thrillerRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="thrillerRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="thrillerRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="thrillerRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="thrillerRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="thrillerRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="thrillerRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="thrillerRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="thrillerRating" value="5"> 5
+                </label><br>
+
+                <!-- War Rating -->
+                <label for="war">War:&nbsp</label>
+                <label>
+                    <input type="radio" name="warRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="warRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="warRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="warRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="warRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="warRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="warRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="warRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="warRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="warRating" value="5"> 5
+                </label><br>
+
+                <!-- Western Rating -->
+                <label for="western">Western:&nbsp</label>
+                <label>
+                    <input type="radio" name="westernRating" value="0.5"> 0.5 
+                </label>
+                <label>
+                    <input type="radio" name="westernRating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="westernRating" value="1.5"> 1.5
+                </label>
+                <label>
+                    <input type="radio" name="westernRating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="westernRating" value="2.5"> 2.5
+                </label>
+                <label>
+                    <input type="radio" name="westernRating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="westernRating" value="3.5"> 3.5
+                </label>
+                <label>
+                    <input type="radio" name="westernRating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="westernRating" value="4.5"> 4.5
+                </label>
+                <label>
+                    <input type="radio" name="westernRating" value="5"> 5
+                </label><br>
+
+
+            </div>
+          </div>
+
+          <!-- Input field for new movie title -->
+          <div class="form-group">
+            <label for="newMovieTitle">Enter a New Movie Title:</label>
+            <input type="text" id="newMovieTitle" class="form-control" placeholder="Movie Title" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Submit Ratings</button>
+        </form>
+
+        <div id="'result">
+
+            <p id="predictedRating" class="text-center mt-4"></p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <script src="static/js/app.js"></script>
+</body>
+
+</html>
