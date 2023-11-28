@@ -1,0 +1,9 @@
+.theater-bg {
+  background-image: url('../images/1000_F_541899954_9gkVEDHBynvJv1yZzCRtfbCsQLEwgDy0.jpg'); /* Replace with movie theater background */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 0px;
+}
+
+/* Additional styling as needed */
