@@ -46,19 +46,19 @@ document.getElementById('movieRatingForm').addEventListener('submit', function (
 
     // Perform any actions needed with the provided rating
     // Send data to Flask API (assuming an endpoint '/predict-rating' exists)
-    predict(actionRating, adventureRating, animationRating, childrenRating, comedyRating, crimeRating, documentaryRating, dramaRating, fantasyRating, horrorRating, musicalRating, mysteryRating, romanceRating, scifiRating, thrillerRating, warRating, westernRating, newMovieTitle);
+    predict(actionRating, adventureRating, animationRating, childrenRating, comedyRating, crimeRating, documentaryRating, dramaRating, fantasyRating, filmnoirRating, horrorRating, musicalRating, mysteryRating, romanceRating, scifiRating, thrillerRating, warRating, westernRating, newMovieTitle);
 
 
     // Clear form fields after submission
     document.getElementById('newMovieTitle').value = '';
 });
 
-function predict(actionRating, adventureRating, animationRating, childrenRating, comedyRating, crimeRating, documentaryRating, dramaRating, fantasyRating, horrorRating, musicalRating, mysteryRating, romanceRating, scifiRating, thrillerRating, warRating, westernRating, newMovieTitle) {
+function predict(actionRating, adventureRating, animationRating, childrenRating, comedyRating, crimeRating, documentaryRating, dramaRating, fantasyRating, filmnoirRating, horrorRating, musicalRating, mysteryRating, romanceRating, scifiRating, thrillerRating, warRating, westernRating, newMovieTitle) {
     // send data to Flask API
     fetch(apiUrl, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application.json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             Action: actionRating,
@@ -70,6 +70,7 @@ function predict(actionRating, adventureRating, animationRating, childrenRating,
             Documentary: documentaryRating,
             Drama: dramaRating,
             Fantasy: fantasyRating,
+            "Film-Noir": filmnoirRating,
             Horror: horrorRating,
             Musical: musicalRating,
             Mystery: mysteryRating,
@@ -77,7 +78,8 @@ function predict(actionRating, adventureRating, animationRating, childrenRating,
             "Sci-Fi": scifiRating,
             Thriller: thrillerRating,
             War: warRating,
-            Westeren: westernRating,
+            Western: westernRating,
+            "(no genres listed)":"0",
             newMovieTitle: newMovieTitle
         })
     })
