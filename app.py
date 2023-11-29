@@ -25,7 +25,7 @@ inputs2 = {'Action':5/19, 'Adventure':5/19, 'Animation':5/19,'Children':2, 'Come
         'Musical':5/19, 'Mystery':5/19, 'Romance':5/19, 'Sci-Fi':5/19, 'Thriller':5/19,
         'War':5/19, 'Western':5/19, '(no genres listed)':5/19}
 
-movie_input = 'Pulp Fiction (1994)'
+
 
 
 # Route to the home page
@@ -66,12 +66,14 @@ def predict():
             war_rating = input_val.get("War")
             western_rating = input_val.get("Western")
             no_rating = input_val.get("(no genres listed)")
+            movie_input = input_val.get("newMovieTitle")
 
         inputs1 = {'Action':float(action_rating), 'Adventure':float(adventure_rating),
         'Animation':float(anim_rating), 'Children':float(children_rating), 'Comedy':float(comedy_rating), 'Crime':float(crime_rating), 'Documentary':float(doc_rating), 'Drama':float(drama_rating),
         'Fantasy':float(fant_rating), 'Film-Noir':float(noir_rating), 'Horror':float(horror_rating), 'Musical':float(music_rating), 'Mystery':float(mystery_rating), 'Romance':float(rom_rating),
         'Sci-Fi':float(sci_rating), 'Thriller':float(thrill_rating), 'War':float(war_rating), 'Western':float(western_rating), '(no genres listed)':float(no_rating)}
 
+        print(inputs1)
         sum_data = []
         count = 0
         for i in inputs1:
@@ -122,7 +124,7 @@ def predict():
         output_percent = round(output_average/5*100)
         print(movie_input +" is a "+str(round(output_average/5*100))+"% match for you.")
 
-        # # Return predicted movie rating
+        # Return predicted movie rating
         return jsonify(output_percent)
 
 
