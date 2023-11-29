@@ -20,10 +20,10 @@ inputs1 = {'Action':2, 'Adventure':5,
         'Sci-Fi':2, 'Thriller':1, 'War':5, 'Western':5, '(no genres listed)':1}
 
 
-inputs2 = {'Action':5/19, 'Adventure':5/19, 'Animation':5/19,'Children':2, 'Comedy':5/19, 'Crime':5/19,
-        'Documentary':5/19, 'Drama':5/19, 'Fantasy':5/19, 'Film-Noir':5/19, 'Horror':5/19,
-        'Musical':5/19, 'Mystery':5/19, 'Romance':5/19, 'Sci-Fi':5/19, 'Thriller':5/19,
-        'War':5/19, 'Western':5/19, '(no genres listed)':5/19}
+inputs2 = {'Action':0.313, 'Adventure':0.255, 'Animation':0.068, 'Children':0.896, 'Comedy':0.347, 'Crime':0.179,
+       'Documentary':0.008, 'Drama':0.442, 'Fantasy':0.115, 'Film-Noir':0.008, 'Horror':0.062,
+       'Musical':0.039, 'Mystery':0.079, 'Romance':0.188, 'Sci-Fi':0.179, 'Thriller':0.280,
+       'War':0.056, 'Western':0.019, '(no genres listed)':0.000}
 
 
 
