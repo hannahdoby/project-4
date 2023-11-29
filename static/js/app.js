@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:5000/predict';
+const apiUrl = 'https://localhost:5000/predict';
 
 document.getElementById('movieRatingForm').addEventListener('submit', function (event) {
   event.preventDefault();
@@ -86,7 +86,7 @@ function predict(apiUrl, actionRating, adventureRating, animationRating, childre
         .then(response => response.json)
         .then(data => {
             // Display predicted Rating
-            document.getElementById('predictedRating').textContent = 'Your Predicted Rating for "${newMovieTitle}": ${data.predictedRating}'
+            document.getElementById('predictedRating').textContent = `We predict "${newMovieTitle}" is a ${data.predictedRating}% match for you.`
         })
         .catch(error => {
             console.error('Error:', error);
