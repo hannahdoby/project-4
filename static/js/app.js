@@ -46,14 +46,14 @@ document.getElementById('movieRatingForm').addEventListener('submit', function (
 
     // Perform any actions needed with the provided rating
     // Send data to Flask API (assuming an endpoint '/predict-rating' exists)
-    predict(apiUrl, actionRating, adventureRating, animationRating, childrenRating, comedyRating, crimeRating, documentaryRating, dramaRating, fantasyRating, filmnoirRating, horrorRating, musicalRating, mysteryRating, romanceRating, scifiRating, thrillerRating, warRating, westernRating, newMovieTitle);
+    predict(apiUrl, actionRating, adventureRating, animationRating, childrenRating, comedyRating, crimeRating, documentaryRating, dramaRating, fantasyRating, filmnoirRating, filmnoirRating, horrorRating, musicalRating, mysteryRating, romanceRating, scifiRating, thrillerRating, warRating, westernRating, newMovieTitle);
 
 
     // Clear form fields after submission
     document.getElementById('newMovieTitle').value = '';
 });
 
-function predict(apiUrl, actionRating, adventureRating, animationRating, childrenRating, comedyRating, crimeRating, documentaryRating, dramaRating, fantasyRating, horrorRating, musicalRating, mysteryRating, romanceRating, scifiRating, thrillerRating, warRating, westernRating, newMovieTitle) {
+function predict(apiUrl, actionRating, adventureRating, animationRating, childrenRating, comedyRating, crimeRating, documentaryRating, dramaRating, fantasyRating, filmnoirRating, horrorRating, musicalRating, mysteryRating, romanceRating, scifiRating, thrillerRating, warRating, westernRating, newMovieTitle) {
     // send data to Flask API
     fetch(apiUrl, {
         method: 'POST',
@@ -70,6 +70,7 @@ function predict(apiUrl, actionRating, adventureRating, animationRating, childre
             Documentary: documentaryRating,
             Drama: dramaRating,
             Fantasy: fantasyRating,
+            "Film-Noir": filmnoirRating,
             Horror: horrorRating,
             Musical: musicalRating,
             Mystery: mysteryRating,
@@ -78,8 +79,8 @@ function predict(apiUrl, actionRating, adventureRating, animationRating, childre
             Thriller: thrillerRating,
             War: warRating,
             Western: westernRating,
-            newMovieTitle: newMovieTitle,
-            "(no genres listed)": 0
+            "(no genres listed)":"0",
+            newMovieTitle: newMovieTitle
         })
     })
         .then(response => response.json)
