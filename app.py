@@ -125,7 +125,7 @@ def predict():
         print(movie_input +" is a "+str(round(output_average/5*100))+"% match for you.")
 
         # Return predicted movie rating
-        return jsonify(output_percent)
+        return jsonify({"percent":output_percent})
 
 
 if __name__ == '__main__':
