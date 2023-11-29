@@ -58,7 +58,7 @@ function predict(apiUrl, actionRating, adventureRating, animationRating, childre
     fetch(apiUrl, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application.json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             Action: actionRating,
