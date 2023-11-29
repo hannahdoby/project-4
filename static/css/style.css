@@ -5,3 +5,22 @@
   min-height: 100vh;
   padding-top: 0px;
 }
+
+.mb-4{
+  background-color: grey;
+  color: white;
+}
+
+#query-newMovie {
+  background-color: grey;
+  color: white;
+}
+
+.mt-4 {
+  background-color: grey;
+  color: white;
+}
+
+#prompt {
+  color: white;
+}
