@@ -10,7 +10,9 @@
   <div class="container-fluid theater-bg">
     <div class="row">
       <div class="col-md-6 offset-md-3 p-5">
-        <h1 class="text-center mb-4">Rate Movie Genres</h1>
+        <h1 id=text class="text-center mb-4">Movie Rating Predictor</h1>
+        <h3>Let us predict your rating for a Movie!!</h3>
+        <p>(First go ahead and rate how you feel about the movie genres listed below)</p>
         <form id="movieRatingForm">
           <!-- Radio buttons for movie genres -->
           <!-- You can use a loop in your actual implementation to generate these dynamically -->
@@ -618,7 +620,7 @@
 
           <!-- Input field for new movie title -->
           <div class="form-group">
-            <label for="newMovieTitle">Enter a New Movie Title:</label>
+            <label for="newMovieTitle">Now, enter a New Movie Title and Year [example: Jumanji (1995)]:</label>
             <input type="text" id="newMovieTitle" class="form-control" placeholder="Movie Title" required>
           </div>
 
