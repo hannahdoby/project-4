@@ -86,7 +86,7 @@ function predict(actionRating, adventureRating, animationRating, childrenRating,
         .then(response => response.json())
         .then(data => {
             // Display predicted Rating
-            document.getElementById('predictedRating').textContent = `Your Predicted Rating for "${newMovieTitle}": ${data.percent} %`
+            document.getElementById('predictedRating').textContent = `The movie "${newMovieTitle}" is a ${data.percent} % match for you.`
         })
         .catch(error => {
             console.error('Error:', error);
