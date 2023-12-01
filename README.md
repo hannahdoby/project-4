@@ -59,3 +59,4 @@ Our group has decided to create a tool using machine learning which can help wit
 * Store new-user inputs for improvement of model through refitting 
 * Incorporate tag data for increased specificity of model results 
 * Host ratings.csv information on SQLite server to allow repository visitors to run full capability of predictive model. At this time, ratings.csv is too large to be hosted on GitHub.
+* Use RegEx to reduce specificity of movie title format necessary in search bar
