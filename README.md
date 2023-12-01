@@ -51,7 +51,7 @@ Our group has decided to create a tool using machine learning which can help wit
 * User can enter new features
 * Model will predict percentage compatibility between user and desired movie
 * UI will display results and give prediction
-* Extended capability for giving movie recommendations included in [run_model_process.ipynb](run_model_process.ipynb) but not yet integrated into UI
+* Extended capability for giving movie recommendations included in [run_model_process.ipynb](Data_Preparation/run_model_process.ipynb) but not yet integrated into UI
 
 
 ## Future goals
