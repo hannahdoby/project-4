@@ -24,10 +24,10 @@ Scope of Work:
 * Create GitHub Repository:
     * https://github.com/hannahdoby/project-4
 
-* Pull MovieLens data into a SQL database: 
+* Pull MovieLens data into Pandas: 
     * download data and review csvs
-    * create schema for tables
-    * create a SQL Database using schema to create tables and CSVs to populate tables
+    * create Pandas dataframes
+    * merge and clean dataframes
 
 * Clean the data using: Python Pandas
     * verify removal of NULL data
@@ -38,14 +38,14 @@ Scope of Work:
     * HTML/CSS/JS
 
 * Create machine learning model:
-    * Tools: JupyterNotebook, Python, Pandas, SciKit-Learn, Flask
+    * Tools: JupyterNotebook, Python, Pandas, SciKit-Learn, Flask, Spark
     * use notebook to pull in the dataset
     * Using Pandas to create a dataframe of the dataset
     * Split our dataset into train and test
     * train the data and test the results
 
 * Create web based UI for new predictions
-    * Tools (TBD): Javascript, HTML, CSS, Flask
+    * Tools: Javascript, HTML, CSS, Flask
     * user can enter new features
     * model will predict outcome
     * UI will display results and give statistics on accuracy
